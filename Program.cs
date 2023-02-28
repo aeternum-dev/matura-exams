@@ -6,6 +6,6 @@ internal class Program
 
     private static void Main(string[] args)
     {
-        Exam2022May.solve();
+        ExamOctober2022.solve();
     }
 }

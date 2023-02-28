@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 
 namespace Exam {
-    class Exam2022May {
+    class ExamOctober2022 {
         static public List<int[]> readSensorLog(string logfile)
             {
                 List<int[]> SensorData = new List<int[]>();
