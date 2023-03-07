@@ -17,6 +17,7 @@ namespace Exam {
                 return SensorData;
 
             }
+
         //create interval fuction in seconds
         static int interval(int[] data1, int[] data2) {
         //          hours           minutes       seconds
@@ -107,25 +108,6 @@ namespace Exam {
         }
 
 
-        //TODO: delete from file
-        //private static void Main(string[] args)
-        //{
-        //    List<int[]> data = readSensorLog("signal.txt");
-        //
-        //    int operationTime = interval(data[0],data[data.Count-1]);
-        //    Console.WriteLine($"The interval between first and last transmission is:{operationTime}");
-        //    printWithStyle(operationTime);
-        //    
-        //    int[][] cornerCords = getBorders(data);
-        //    Console.WriteLine("Corners of container rectange: Topright: X " + cornerCords[0][0] + ", Y "
-        //        + cornerCords[0][1] + "; Bottomleft: X " +  cornerCords[1][0] + ", Y " + cornerCords[1][1]);
-        //
-        //    Console.WriteLine("Megtett távolság: {0:0.000}",accumulatedDistance(data));
-        //
-        //    missingData(data);
-        //
-        //    Console.ReadKey();
-        //
-        //}
+        
     }
 }
