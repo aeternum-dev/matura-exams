@@ -68,16 +68,7 @@ namespace Exam {
                 //write to fines.txt; platenumber   average speed(int)  fine(ft)
                 Console.WriteLine("Exercise 7");
                 Console.WriteLine("Saving fines to output file.");
-                using ( StreamWriter reader = new StreamWriter("fines.txt")) {
-                    foreach (var item in cars)
-                    {
-                    if (CalculateSpeed(item) > 104) {
-
-                        reader.WriteLine("{0}\t{1:0.00} km/h\t{2} Ft",item._plate, CalculateSpeed(item), CalculateFine(item));
-                        }
-                    }    
-                }
-                
+                PrintToFile(cars, "fines.txt");
             
             }
             catch (System.Exception)
@@ -169,6 +160,18 @@ namespace Exam {
             else if ( speed <= 151)
                 return 60000;
             else return 200000;
+        }
+
+        static void PrintToFile(List<Car> cars, string filename) {
+            using ( StreamWriter reader = new StreamWriter(filename)) {
+                    foreach (var item in cars)
+                    {
+                    if (CalculateSpeed(item) > 104) {
+
+                        reader.WriteLine("{0}\t{1:0.00} km/h\t{2} Ft",item._plate, CalculateSpeed(item), CalculateFine(item));
+                        }
+                    }    
+                }
         }
 
     }
