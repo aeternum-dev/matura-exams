@@ -63,7 +63,7 @@ namespace Exam {
                 
                 //display number of vehicles that exceed speed limit ( 90km/h )
                 Console.WriteLine("Exercise 6");
-                Console.WriteLine("Number of cars exceeding the speed limit: {0:0.00}%", ExceedSpeedLimit(cars));
+                Console.WriteLine("Number of cars exceeding the speed limit: {0}%", ExceedSpeedLimit(cars));
                 
                 //write to fines.txt; platenumber   average speed(int)  fine(ft)
                 Console.WriteLine("Exercise 7");
@@ -168,7 +168,7 @@ namespace Exam {
                     {
                     if (CalculateSpeed(item) > 104) {
 
-                        reader.WriteLine("{0}\t{1:0.00} km/h\t{2} Ft",item._plate, CalculateSpeed(item), CalculateFine(item));
+                        reader.WriteLine("{0}\t{1:0} km/h\t{2} Ft",item._plate, CalculateSpeed(item), CalculateFine(item));
                         }
                     }    
                 }
