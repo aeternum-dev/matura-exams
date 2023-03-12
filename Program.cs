@@ -7,7 +7,7 @@ internal class Program
     private static void Main(string[] args)
     {
         ExamMay2022.solve();
-        Console.WriteLine("Hello World");
+        
 
         
     }
