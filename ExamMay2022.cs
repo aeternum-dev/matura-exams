@@ -81,14 +81,14 @@ namespace Exam {
 
         }
         static List<Car> ReadFile() {
-            
-            IEnumerable<string> stuff = File.ReadLines("measurements.txt");
-            List<Car> cars = new List<Car>();
-            foreach (var e in stuff)
-            {
-                cars.Add(new Car(e));
+            using (StreamReader reader = new StreamReader("measurements.txt")) {
+                List<Car> cars = new List<Car>();
+                string tmp;
+                while ((tmp = reader.ReadLine()) != null) {
+                    cars.Add(new Car(tmp));
+                }
+                return cars;
             }
-            return cars;
         }
 
         static int NumberofCarsBefore9am(List<Car> cars){
